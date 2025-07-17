@@ -1,0 +1,16 @@
+tags:
+  - Logs
+summary: Retrieve a log by ID
+parameters:
+  - in: path
+    name: log_id
+    required: true
+    type: integer
+    description: ID of the log to retrieve
+responses:
+  200:
+    description: Log found
+    schema:
+      $ref: '#/definitions/Log'
+  404:
+    description: Log not found

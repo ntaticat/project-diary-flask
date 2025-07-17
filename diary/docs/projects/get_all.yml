@@ -1,0 +1,9 @@
+tags:
+  - Projects
+responses:
+  200:
+    description: List of projects
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/Project'

@@ -1,0 +1,22 @@
+tags:
+  - Logs
+summary: Update a log
+parameters:
+  - in: path
+    name: log_id
+    required: true
+    type: integer
+    description: ID of the log to update
+  - in: body
+    name: body
+    schema:
+      $ref: '#/definitions/Log'
+responses:
+  200:
+    description: Log updated
+    schema:
+      $ref: '#/definitions/Log'
+  404:
+    description: Log not found
+  401:
+    description: Unauthorized

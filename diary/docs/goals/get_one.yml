@@ -1,0 +1,16 @@
+tags:
+  - Goals
+summary: Retrieve a goal by ID
+parameters:
+  - in: path
+    name: goal_id
+    type: integer
+    required: true
+    description: ID of the goal to retrieve
+responses:
+  200:
+    description: A Goal
+    schema:
+      $ref: '#/definitions/Goal'
+  404:
+    description: Goal not found

@@ -1,0 +1,15 @@
+tags:
+  - Projects
+parameters:
+  - in: path
+    name: project_id
+    type: integer
+    required: true
+    description: ID of the project to delete
+responses:
+  204:
+    description: Project deleted
+  404:
+    description: Project not found
+  401:
+    description: Unauthorized

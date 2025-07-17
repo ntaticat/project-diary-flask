@@ -1,0 +1,10 @@
+tags:
+  - Logs
+summary: Retrieve all logs
+responses:
+  200:
+    description: List of logs
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/Log'

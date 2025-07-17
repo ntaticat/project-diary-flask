@@ -1,0 +1,10 @@
+tags:
+  - Goals
+summary: Retrieve all goals
+responses:
+  200:
+    description: List of goals
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/Goal'

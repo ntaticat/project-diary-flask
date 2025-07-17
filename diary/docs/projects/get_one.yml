@@ -1,0 +1,15 @@
+tags:
+  - Projects
+parameters:
+  - in: path
+    name: project_id
+    type: integer
+    required: true
+    description: ID of the project to retrieve
+responses:
+  200:
+    description: A project
+    schema:
+      $ref: '#/definitions/Project'
+  404:
+    description: Project not found

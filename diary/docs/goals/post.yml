@@ -1,0 +1,15 @@
+tags:
+  - Goals
+summary: Create a new goal
+parameters:
+  - in: body
+    name: body
+    schema:
+      $ref: '#/definitions/Goal'
+responses:
+  201:
+    description: Goal created
+    schema:
+      $ref: '#/definitions/Goal'
+  401:
+    description: Unauthorized

@@ -1,0 +1,14 @@
+tags:
+  - Projects
+parameters:
+  - in: body
+    name: body
+    schema:
+      $ref: '#/definitions/Project'
+responses:
+  201:
+    description: Project created
+    schema:
+      $ref: '#/definitions/Project'
+  401:
+    description: Unauthorized

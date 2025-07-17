@@ -1,0 +1,22 @@
+tags:
+  - Goals
+summary: Update a goal
+parameters:
+  - in: path
+    name: goal_id
+    type: integer
+    required: true
+    description: ID of the goal to update
+  - in: body
+    name: body
+    schema:
+      $ref: '#/definitions/Goal'
+responses:
+  200:
+    description: Goal updated
+    schema:
+      $ref: '#/definitions/Goal'
+  404:
+    description: Goal not found
+  401:
+    description: Unauthorized

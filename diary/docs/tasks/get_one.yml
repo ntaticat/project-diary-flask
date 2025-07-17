@@ -1,0 +1,15 @@
+tags:
+  - Tasks
+summary: Retrieve a task by ID
+parameters:
+  - in: path
+    name: task_id
+    required: true
+    type: integer
+responses:
+  200:
+    description: Task found
+    schema:
+      $ref: '#/definitions/Task'
+  404:
+    description: Task not found

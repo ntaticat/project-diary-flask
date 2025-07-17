@@ -1,0 +1,16 @@
+tags:
+  - Goals
+summary: Delete a goal
+parameters:
+  - in: path
+    name: goal_id
+    type: integer
+    required: true
+    description: ID of the goal to delete
+responses:
+  204:
+    description: Goal deleted
+  404:
+    description: Goal not found
+  401:
+    description: Unauthorized

@@ -1,0 +1,18 @@
+tags:
+  - FavoriteProject
+summary: Remove project from favorites
+parameters:
+  - name: project_id
+    in: path
+    required: true
+    type: integer
+    description: ID of the project to remove from favorites
+responses:
+  204:
+    description: Favorite removed successfully
+  401:
+    description: Unauthorized - Missing or invalid token
+  403:
+    description: Forbidden - Not the owner of the favorite
+  404:
+    description: Favorite not found

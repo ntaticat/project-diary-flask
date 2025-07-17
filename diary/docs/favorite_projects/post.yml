@@ -1,0 +1,20 @@
+tags:
+  - FavoriteProject
+summary: Add project to favorites
+parameters:
+  - name: project_id
+    in: path
+    required: true
+    type: integer
+    description: ID of the project to favorite
+responses:
+  201:
+    description: Project added to favorites
+    schema:
+      $ref: '#/definitions/FavoriteProject'
+  400:
+    description: Already favorited
+  401:
+    description: Unauthorized - Missing or invalid token
+  404:
+    description: Project not found

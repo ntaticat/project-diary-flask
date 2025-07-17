@@ -1,0 +1,17 @@
+tags:
+  - Tasks
+summary: Get tasks by goal ID
+parameters:
+  - in: path
+    name: goal_id
+    required: true
+    type: integer
+responses:
+  200:
+    description: Tasks for a goal
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/Task'
+  404:
+    description: Goal not found

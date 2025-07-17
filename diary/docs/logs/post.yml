@@ -1,0 +1,21 @@
+summary: Create a new Log
+description: Creates a new log entry associated with a specific goal.
+tags:
+  - Logs
+
+parameters:
+  - in: body
+    name: body
+    schema:
+      $ref: '#/definitions/Log'
+
+responses:
+  201:
+    description: Log created successfully
+    schema:
+      $ref: '#/definitions/Log'
+        
+  400:
+    description: Invalid input data
+  401:
+    description: Unauthorized

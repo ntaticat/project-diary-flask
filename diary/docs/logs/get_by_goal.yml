@@ -1,0 +1,18 @@
+tags:
+  - Logs
+summary: Get logs for a specific goal
+parameters:
+  - in: path
+    name: goal_id
+    required: true
+    type: integer
+    description: ID of the goal
+responses:
+  200:
+    description: List of logs associated with the goal
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/Log'
+  404:
+    description: Goal not found

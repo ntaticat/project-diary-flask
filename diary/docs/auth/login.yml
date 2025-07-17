@@ -1,0 +1,31 @@
+
+tags:
+  - Auth
+summary: User login
+description: Login with username and password
+parameters:
+  - in: body
+    name: credentials
+    required: true
+    schema:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          example: rafael
+        password:
+          type: string
+          example: secret123
+responses:
+  200:
+    description: JWT access token
+    schema:
+      type: object
+      properties:
+        access_token:
+          type: string
+  401:
+    description: Invalid credentials

@@ -1,0 +1,12 @@
+tags:
+  - FavoriteProject
+summary: Get user's favorite projects
+responses:
+  200:
+    description: List of favorite projects
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/FavoriteProject'
+  401:
+    description: Unauthorized - Missing or invalid token

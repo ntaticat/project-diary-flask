@@ -1,0 +1,35 @@
+tags:
+  - Auth
+summary: Register a new user
+description: Create a new user and return an access token
+parameters:
+  - in: body
+    name: user
+    required: true
+    schema:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          example: rafael
+        password:
+          type: string
+          example: secret123
+responses:
+  201:
+    description: User created
+    schema:
+      type: object
+      properties:
+        message:
+          type: string
+          example: User created
+        user:
+          $ref: '#/definitions/User'
+        access_token:
+          type: string
+  400:
+    description: Username already exists

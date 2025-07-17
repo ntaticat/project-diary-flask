@@ -1,0 +1,10 @@
+tags:
+  - Tasks
+summary: Retrieve all tasks
+responses:
+  200:
+    description: List of tasks
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/Task'

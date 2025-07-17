@@ -1,0 +1,16 @@
+tags:
+  - Logs
+summary: Delete a log
+parameters:
+  - in: path
+    name: log_id
+    type: integer
+    required: true
+    description: ID of the log to delete
+responses:
+  204:
+    description: Log deleted
+  404:
+    description: Log not found
+  401:
+    description: Unauthorized

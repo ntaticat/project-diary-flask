@@ -1,0 +1,21 @@
+tags:
+  - Tasks
+summary: Update a task
+parameters:
+  - in: path
+    name: task_id
+    required: true
+    type: integer
+  - in: body
+    name: body
+    schema:
+      $ref: '#/definitions/Task'
+responses:
+  200:
+    description: Task updated
+    schema:
+      $ref: '#/definitions/Task'
+  404:
+    description: Task not found
+  401:
+    description: Unauthorized
